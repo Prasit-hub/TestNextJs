@@ -23,7 +23,7 @@ async function authenticate({ username, password }: { username: string, password
     }
 
     // create a jwt token that is valid for 7 days
-    const token = jwt.sign({ sub: user.id }, process.env.JWT_SECRET!, { expiresIn: '7d' });
+    const token = jwt.sign({ sub: user.id }, 'G123'!, { expiresIn: '7d' });
 
     return {
         user: user.toJSON(),
